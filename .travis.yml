@@ -16,9 +16,9 @@ before_install:
   - sudo apt-get install -y xdg-utils || echo no xdg-utils
   - sudo apt install maven
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start || echo No X11
-  - sleep 3
+  #- export DISPLAY=:99.0
+  #- sh -e /etc/init.d/xvfb start || echo No X11
+  - sleep 8
 script:
   #- mvn install -DskipTests
   - mvn -f $TEST_SUITE-archetype-test verify
