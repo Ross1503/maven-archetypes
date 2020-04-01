@@ -22,7 +22,7 @@ before_script:
 script:
   #- mvn install -DskipTests
   - mvn -f $TEST_SUITE-archetype-test verify
-dist: trusty
+dist: xenial
 osx_image: xcode9.3
 os:
   - linux
