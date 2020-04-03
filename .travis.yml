@@ -19,6 +19,9 @@ before_install:
   - sudo apt install maven
 before_script:
   - export DISPLAY=:99.0
+  - cp /usr/lib/aarch64-linux-gnu/jni/libprism_es2.so /home/travis/.openjfx/cache/11/
+  - cp /usr/lib/aarch64-linux-gnu/jni/libprism_sw.so /home/travis/.openjfx/cache/11/
+  - cp /usr/lib/aarch64-linux-gnu/jni/libglass.so /home/travis/.openjfx/cache/11/
   - sh -e /etc/init.d/xvfb start || echo No X11
   - sleep 8
 script:
