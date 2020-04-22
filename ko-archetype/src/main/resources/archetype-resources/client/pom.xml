@@ -162,13 +162,6 @@
         <scope>provided</scope>
     </dependency>
     <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-web</artifactId>
-        <version>\${openjfx.version}</version>
-        <scope>test</scope>
-    </dependency>
-
-    <dependency>
         <groupId>com.dukescript.api</groupId>
         <artifactId>junit-osgi</artifactId>
         <scope>test</scope>
