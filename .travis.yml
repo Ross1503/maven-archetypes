@@ -3,18 +3,21 @@ jdk:
   - oraclejdk8
   - openjdk11
 sudo: required
+addons:
+  apt:
+    packages:
+      - xvfb
+      - maven
 before_install:
   - sudo apt-get -qq update || echo no sudo apt-get
   - sudo apt-get install libopenjfx-jni
   - sudo apt-get install -y libwebkitgtk-3.0-0 || echo no sudo apt-get
   - sudo apt-get install -y xdg-utils || echo no xdg-utils
-  - sudo apt-get install maven
-  - sudo apt-get install xvfb
 before_script:
   - export DISPLAY=:1
   - export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/jni/:$LD_LIBRARY_PATH
   - /usr/bin/Xvfb :1 -screen 0 1024x768x24 &
-  - sleep 3
+  - sleep 9
 script:
   - mvn install -DskipTests
   - mvn -f $TEST_SUITE-archetype-test verify
