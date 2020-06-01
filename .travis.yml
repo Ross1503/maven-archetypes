@@ -18,7 +18,7 @@ before_script:
   - "/usr/bin/Xvfb :1 -screen 0 1024x768x24" &
   - export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/jni/:$LD_LIBRARY_PATH
   - sh -e /etc/init.d/xvfb start || echo No X11
-  - sleep 3
+  - sleep 4
 script:
   - mvn install -DskipTests
   - mvn -f $TEST_SUITE-archetype-test verify
