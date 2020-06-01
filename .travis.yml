@@ -3,16 +3,13 @@ jdk:
   - oraclejdk8
   - openjdk11
 sudo: required
-addons:
-  apt:
-    packages:
-      - xvfb
 before_install:
   - sudo apt-get -qq update || echo no sudo apt-get
   - sudo apt-get install libopenjfx-jni
   - sudo apt-get install -y libwebkitgtk-3.0-0 || echo no sudo apt-get
   - sudo apt-get install -y xdg-utils || echo no xdg-utils
   - sudo apt-get install maven
+  - sudo apt-get install xvfb
 before_script:
   - export DISPLAY=:99.0
   - "/usr/bin/Xvfb :1 -screen 0 1024x768x24" &
