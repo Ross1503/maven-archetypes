@@ -11,8 +11,8 @@ before_install:
   - sudo apt-get install maven
   - sudo apt-get install xvfb
 before_script:
-  - export DISPLAY=:99.0
-  - "/usr/bin/Xvfb :1 -screen 0 1024x768x24" &
+  - export DISPLAY=:1
+  - /usr/bin/Xvfb :1 -screen 0 1024x768x24 &
   - export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/jni/:$LD_LIBRARY_PATH
   - sh -e /etc/init.d/xvfb start || echo No X11
   - sleep 4
