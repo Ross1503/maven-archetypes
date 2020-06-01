@@ -17,6 +17,7 @@ before_install:
   - sudo apt-get install maven
 before_script:
   - export DISPLAY=:99.0
+  - ls /usr/lib/aarch64-linux-gnu/jni/
   - sh -e /etc/init.d/xvfb start || echo No X11
   - sleep 3
 script:
