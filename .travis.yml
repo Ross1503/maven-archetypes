@@ -12,7 +12,7 @@ before_install:
   - sudo apt-get install xvfb
 before_script:
   - export DISPLAY=:1
-  - /usr/bin/Xvfb :1 -screen 0 1024x768x24
+  - /usr/bin/Xvfb :1 -screen 0 1024x768x24 &
   - sleep 3
 script:
   - mvn install -DskipTests
