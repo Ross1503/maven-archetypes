@@ -3,7 +3,7 @@ addons:
   apt:
     packages:
       - xvfb
-      - maven=2.2.1
+      - maven
 before_install:
   - sudo apt-get -qq update || echo no sudo apt-get
   - sudo apt-get install openjdk-8-jdk
