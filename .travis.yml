@@ -3,7 +3,7 @@ addons:
   apt:
     packages:
       - xvfb
-      - maven
+      - maven=3.5.3
 before_install:
   - sudo apt-get -qq update || echo no sudo apt-get
   - sudo apt-get install openjdk-11-jdk
