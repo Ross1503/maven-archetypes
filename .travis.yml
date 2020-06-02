@@ -1,5 +1,8 @@
 language: java
-required: sudo
+jdk:
+  - oraclejdk8
+  - openjdk11
+sudo: required
 addons:
   apt:
     packages:
@@ -7,21 +10,20 @@ addons:
       - maven
 before_install:
   - sudo apt-get -qq update || echo no sudo apt-get
-  - sudo apt-get install openjdk-11-jdk
   - sudo apt-get install libopenjfx-jni
   - sudo apt-get install -y libwebkitgtk-3.0-0 || echo no sudo apt-get
   - sudo apt-get install -y xdg-utils || echo no xdg-utils
 before_script:
   - export DISPLAY=:1
-  - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64
+  - export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-arm64/
   - export PATH=$PATH:$JAVA_HOME/bin
   - export LD_LIBRARY_PATH=/usr/lib/aarch64-linux-gnu/jni/:$LD_LIBRARY_PATH
   - /usr/bin/Xvfb :1 -screen 0 1024x768x24 &
-  - sleep 9
+  - sleep 3
 script:
   - mvn install -DskipTests
-  - mvn -f $TEST_SUITE-archetype-test verify
-dist: trusty
+  - mvn -f $TEST_SUITE-archetype-test install
+dist: bionic
 osx_image: xcode9.3
 os:
   - linux
