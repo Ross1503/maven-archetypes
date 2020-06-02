@@ -1,4 +1,5 @@
 language: java
+required: sudo
 addons:
   apt:
     packages:
@@ -6,7 +7,7 @@ addons:
       - maven
 before_install:
   - sudo apt-get -qq update || echo no sudo apt-get
-  - sudo apt-get install openjdk-8-jdk
+  - sudo apt-get install openjdk-11-jdk
   - sudo apt-get install libopenjfx-jni
   - sudo apt-get install -y libwebkitgtk-3.0-0 || echo no sudo apt-get
   - sudo apt-get install -y xdg-utils || echo no xdg-utils
