@@ -128,6 +128,10 @@ Use:
 ```
 to generate the necessary subproject.
 
+## Installation on aarch64 platform:
+To install and test this module on aarch64 platform, we need to install one additional package named "libopenjfx-jni" as bellow:
+$ sudo apt-get install libopenjfx-jni
+
 ## More Info
 
 Have fun playing with [DukeScript](http://dukescript.com) archetypes and 
