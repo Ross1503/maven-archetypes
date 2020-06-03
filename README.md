@@ -11,6 +11,11 @@ If you are OK using command line, continue reading on. Otherwise see
 the [DukeScript Getting Started](http://dukescript.com/getting_started.html) tutorial
 for steps to do the same from inside of an IDE.
 
+## Installation on aarch64 platform:
+To install and test this module on aarch64 platform, we need to install one additional package named "libopenjfx-jni" as bellow:
+```bash
+$ sudo apt-get install libopenjfx-jni
+```
 ## Creating the Project
 
 There is a simple command to create a basic application:
@@ -127,10 +132,6 @@ Use:
 -Dnetbeanspath=client-netbeans
 ```
 to generate the necessary subproject.
-
-## Installation on aarch64 platform:
-To install and test this module on aarch64 platform, we need to install one additional package named "libopenjfx-jni" as bellow:
-$ sudo apt-get install libopenjfx-jni
 
 ## More Info
 
